@@ -61,7 +61,7 @@ function App() {
   useEffect(() => {
     // Initialize worker if not already created
     if (!worker.current) {
-      worker.current = new Worker(new URL('./worker.js', import.meta.url), { type: 'module' });
+      worker.current = new Worker(new URL('./Worker.js', import.meta.url), { type: 'module' });
     }
 
     // Attach message handler

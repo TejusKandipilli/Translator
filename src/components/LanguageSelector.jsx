@@ -1,0 +1,91 @@
+const LANGUAGES = {
+  "Acehnese (Arabic script)": "ace_Arab",
+  "Acehnese (Latin script)": "ace_Latn",
+  "Afrikaans": "afr_Latn",
+  "Zulu": "zul_Latn",
+  "Arabic": "arb_Arab",
+  "Amharic": "amh_Ethi",
+  "Azerbaijani (Latin script)": "azj_Latn",
+  "Azerbaijani (Arabic script)": "azb_Arab",
+  "Bengali": "ben_Beng",
+  "Bhojpuri": "bho_Deva",
+  "Bulgarian": "bul_Cyrl",
+  "Catalan": "cat_Latn",
+  "Chinese (Simplified)": "zho_Hans",
+  "Chinese (Traditional)": "zho_Hant",
+  "Croatian": "hrv_Latn",
+  "Czech": "ces_Latn",
+  "Danish": "dan_Latn",
+  "Dutch": "nld_Latn",
+  "English": "eng_Latn",
+  "Estonian": "est_Latn",
+  "Finnish": "fin_Latn",
+  "French": "fra_Latn",
+  "Georgian": "kat_Geor",
+  "German": "deu_Latn",
+  "Greek": "ell_Grek",
+  "Gujarati": "guj_Gujr",
+  "Hausa": "hau_Latn",
+  "Hebrew": "heb_Hebr",
+  "Hindi": "hin_Deva",
+  "Hungarian": "hun_Latn",
+  "Icelandic": "isl_Latn",
+  "Igbo": "ibo_Latn",
+  "Indonesian": "ind_Latn",
+  "Italian": "ita_Latn",
+  "Japanese": "jpn_Jpan",
+  "Javanese": "jav_Latn",
+  "Kannada": "kan_Knda",
+  "Kazakh": "kaz_Cyrl",
+  "Khmer": "khm_Khmr",
+  "Korean": "kor_Hang",
+  "Kurdish (Latin script)": "kmr_Latn",
+  "Kyrgyz": "kir_Cyrl",
+  "Lao": "lao_Laoo",
+  "Latvian": "lvs_Latn",
+  "Lithuanian": "lit_Latn",
+  "Malay": "zsm_Latn",
+  "Malayalam": "mal_Mlym",
+  "Marathi": "mar_Deva",
+  "Nepali": "npi_Deva",
+  "Norwegian": "nob_Latn",
+  "Pashto": "pbt_Arab",
+  "Persian": "pes_Arab",
+  "Polish": "pol_Latn",
+  "Portuguese": "por_Latn",
+  "Punjabi": "pan_Guru",
+  "Romanian": "ron_Latn",
+  "Russian": "rus_Cyrl",
+  "Serbian": "srp_Cyrl",
+  "Sinhala": "sin_Sinh",
+  "Slovak": "slk_Latn",
+  "Slovenian": "slv_Latn",
+  "Somali": "som_Latn",
+  "Spanish": "spa_Latn",
+  "Swahili": "swh_Latn",
+  "Swedish": "swe_Latn",
+  "Tagalog": "tgl_Latn",
+  "Tamil": "tam_Taml",
+  "Telugu": "tel_Telu",
+  "Thai": "tha_Thai",
+  "Turkish": "tur_Latn",
+  "Ukrainian": "ukr_Cyrl",
+  "Urdu": "urd_Arab",
+  "Uzbek": "uzn_Latn",
+  "Vietnamese": "vie_Latn",
+  "Yoruba": "yor_Latn"
+};
+
+
+export default function LanguageSelector({ type, onChange, defaultLanguage }) {
+  return (
+    <div className='language-selector'>
+      <label>{type}: </label>
+      <select onChange={onChange} defaultValue={defaultLanguage}>
+        {Object.entries(LANGUAGES).map(([key, value]) => {
+          return <option key={key} value={value}>{key}</option>
+        })}
+      </select>
+    </div>
+  )
+}

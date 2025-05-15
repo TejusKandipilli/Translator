@@ -87,7 +87,10 @@ function App() {
   return (
     <>
       <h1 className="text-4xl font-bold text-center text-blue-700 mt-8">Translator</h1>
-      <h2 className="text-xl text-center text-gray-600 mb-6">Select from around 200 languages</h2>
+      <p className="text-xl text-center text-gray-600 mb-6">Select from around 70+ languages
+<br/>
+Powered by Xenova/nllb-200-distilled-600M
+      </p>
 
       <div className="max-w-3xl mx-auto p-4 bg-white shadow-md rounded-2xl space-y-6">
         {/* Language Selectors */}
